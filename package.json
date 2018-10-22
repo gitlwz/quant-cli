@@ -1,0 +1,25 @@
+{
+    "name": "quant-cli",
+    "version": "1.0.1",
+    "description": "量投科技前端脚手架工具",
+    "main": "index.js",
+    "Keywords":"quant-cli",
+    "bin": {
+        "quant": "index.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "push": "npm publish"
+    },
+    "author": "liuwenzhu",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^2.4.1",
+        "commander": "^2.19.0",
+        "download-git-repo": "^1.1.0",
+        "handlebars": "^4.0.12",
+        "inquirer": "^6.2.0",
+        "log-symbols": "^2.2.0",
+        "ora": "^3.0.0"
+    }
+}
