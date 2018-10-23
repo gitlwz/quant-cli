@@ -29,7 +29,7 @@ program.version('1.0.0', '-v, --version')
                 },{
                     type:"confirm",
                     name: 'isTop',
-                    message: '导航栏是否在顶部',
+                    message: '导航栏是在顶部Y|| 侧边N',
                     default:true,
                 },{
                     name: 'version',
