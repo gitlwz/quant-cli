@@ -7,7 +7,7 @@ const inquirer = require('inquirer');
 const ora = require('ora');
 const chalk = require('chalk');
 const symbols = require('log-symbols');
-program.version('1.1.0', '-v, --version')
+program.version('2.0.0', '-v, --version')
     .command('init [name]')
     .action((name) => {
         name = name || "quant-project"
@@ -32,11 +32,6 @@ program.version('1.1.0', '-v, --version')
                     message: '导航栏是在顶部Y|| 侧边N',
                     default: true,
                 }, {
-                    type: "confirm",
-                    name: 'haveDemo',
-                    message: '生成的项目是否涵盖管理工程Demo用例 Y || N',
-                    default: false,
-                }, {
                     name: 'version',
                     message: '请输入项目版本',
                     default: "1.0.0",
@@ -44,10 +39,7 @@ program.version('1.1.0', '-v, --version')
             ]).then((answers) => {
                 const spinner = ora('正在生成模板...');
                 spinner.start();
-                let url = "direct:http://gitlab.quantdo.cn/liuwz/quant-template.git";
-                if (!!answers.haveDemo) {
-                    url = "direct:http://gitlab.quantdo.cn/liuwz/quant-template.git#demo";
-                }
+                let url = "direct:http://gitlab.quantdo.cn/liuwz/quant-template.git#2.0.0";
                 download(url, name, { clone: true }, (err) => {
                     if (err) {
                         spinner.fail();
