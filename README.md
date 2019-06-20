@@ -5,6 +5,10 @@
 
 > `$ npm  install  -g  quant-cli`
 
+**安装1.x**
+
+> `$ npm  install  -g  quant-cli@1.x`
+
 **用法**
 
 > `$ quant  init  <project-name>`
