@@ -38,7 +38,7 @@ program.version('3.1.0', '-v, --version')
                 }, {
                     type: "confirm",
                     name: 'theme',
-                    message: '是否使用动态渲染主题 （使用Y,不使用N）',
+                    message: '是否使用动态渲染主题 （使用Y,不使用N）此功能不可回退',
                     default: false,
                 }
             ]).then((answers) => {
