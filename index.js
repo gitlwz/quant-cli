@@ -7,7 +7,7 @@ const inquirer = require('inquirer');
 const ora = require('ora');
 const chalk = require('chalk');
 const symbols = require('log-symbols');
-program.version('3.0.2', '-v, --version')
+program.version('3.1.0', '-v, --version')
     .command('init [name]')
     .action((name) => {
         name = name || "quant-project"
@@ -35,11 +35,19 @@ program.version('3.0.2', '-v, --version')
                     name: 'version',
                     message: '请输入项目版本',
                     default: "1.0.0",
+                }, {
+                    type: "confirm",
+                    name: 'theme',
+                    message: '是否使用动态渲染主题 （使用Y,不使用N）',
+                    default: false,
                 }
             ]).then((answers) => {
                 const spinner = ora('正在生成模板...');
                 spinner.start();
                 let url = "direct:http://192.168.106.113/liuwz/quant-template.git#3.0.0";
+                if (answers.theme) {
+                    url = "direct:http://192.168.106.113/liuwz/quant-template.git#3.0.0-theme";
+                }
                 download(url, name, { clone: true }, (err) => {
                     if (err) {
                         spinner.fail();
