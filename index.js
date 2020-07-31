@@ -41,9 +41,9 @@ program.version('4.0.0', '-v, --version')
                 spinner.start();
                 let url = "";
                 if (answers.isTop) {
-                    url = "direct:http://192.168.106.113/liuwz/quant-template.git#4.0.0-top";
+                    url = "direct:http://192.168.106.113/Architecture/QuantdoTemplate.git#4.0.0-top";
                 } else {
-                    url = "direct:http://192.168.106.113/liuwz/quant-template.git#4.0.0-left"
+                    url = "direct:http://192.168.106.113/Architecture/QuantdoTemplate.git#4.0.0-left"
                 }
                 download(url, name, { clone: true }, (err) => {
                     if (err) {
