@@ -44,9 +44,9 @@ program.version('3.1.0', '-v, --version')
             ]).then((answers) => {
                 const spinner = ora('正在生成模板...');
                 spinner.start();
-                let url = "direct:http://192.168.106.113/liuwz/quant-template.git#3.0.0";
+                let url = "direct:http://192.168.106.113/Architecture/QuantdoTemplate.git#3.0.0";
                 if (answers.theme) {
-                    url = "direct:http://192.168.106.113/liuwz/quant-template.git#3.0.0-theme";
+                    url = "direct:http://192.168.106.113/Architecture/QuantdoTemplate.git#3.0.0-theme";
                 }
                 download(url, name, { clone: true }, (err) => {
                     if (err) {
