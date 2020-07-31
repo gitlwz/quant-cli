@@ -7,7 +7,8 @@ const inquirer = require('inquirer');
 const ora = require('ora');
 const chalk = require('chalk');
 const symbols = require('log-symbols');
-program.version('3.1.0', '-v, --version')
+const package = require("./package.json")
+program.version(package.version, '-v, --version')
     .command('init [name]')
     .action((name) => {
         name = name || "quant-project"
