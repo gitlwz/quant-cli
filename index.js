@@ -7,7 +7,7 @@ const inquirer = require('inquirer');
 const ora = require('ora');
 const chalk = require('chalk');
 const symbols = require('log-symbols');
-program.version('2.0.0', '-v, --version')
+program.version('2.0.4', '-v, --version')
     .command('init [name]')
     .action((name) => {
         name = name || "quant-project"
@@ -39,7 +39,7 @@ program.version('2.0.0', '-v, --version')
             ]).then((answers) => {
                 const spinner = ora('正在生成模板...');
                 spinner.start();
-                let url = "direct:http://192.168.106.113/liuwz/quant-template.git#2.0.0";
+                let url = "direct:http://192.168.106.113/Architecture/QuantdoTemplate.git#2.0.0";
                 download(url, name, { clone: true }, (err) => {
                     if (err) {
                         spinner.fail();

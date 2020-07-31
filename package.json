@@ -1,6 +1,6 @@
 {
     "name": "quant-cli",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "description": "量投科技前端脚手架工具",
     "main": "index.js",
     "keywords": [
